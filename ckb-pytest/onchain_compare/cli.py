@@ -46,9 +46,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--chunkify", action="store_true")
     parser.add_argument(
         "--signature-policy",
-        choices=["ignore", "compare", "require"],
-        default="compare",
-        help="compare reports signature match; require also fails when absent/mismatched.",
+        choices=["ignore", "require"],
+        default="require",
+        help="require fails when signature is absent or mismatched.",
     )
     return parser.parse_args()
 

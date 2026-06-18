@@ -177,6 +177,12 @@ The returned hash equals the same transaction with `headerDeps` removed.
 - `--run-manual-ui`: allow manual UI tests.
 - `--run-slow`: allow slow/boundary tests.
 
+`signature_policy` is intentionally strict. Positive on-chain cases use
+`require`, which fails when the returned signature does not match the chain
+witness for that signing group. Do not use a half-strict `compare` policy; only
+use `ignore` for explicit manual/special cases where no chain signature can be
+compared.
+
 ## Case Mapping
 
 - `tests/test_p0_smoke.py`: `CKB-ENV-001`, `CKB-ADDR-001/002/003`, `CKB-MSG-001/002`, `CKB-TX-001`

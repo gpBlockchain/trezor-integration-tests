@@ -73,31 +73,26 @@
     },
     {
       "name": "witness-args-and-random-raw",
-      "signature_policy": "compare",
       "tx_hash": "0x742fbdb8a4f42558c7ffbbfa0c5f902332f3bb4c7ea7614ba3fded9cc2919c98"
     },
     {
       "name": "mixed-lock-groups-primary",
-      "signature_policy": "compare",
       "tx_hash": "0xfdf3ae2403e05306d556b6b5da987ff921c4d8c971c916dbbf95c95bb7bc7571"
     },
     {
       "name": "mixed-lock-groups-secondary",
       "address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqffdkfhh9fv0kscyfnzr9y85ddyhgu53fcuhthwu",
       "path": "m/44'/309'/0'/0/1",
-      "signature_policy": "compare",
       "tx_hash": "0xfdf3ae2403e05306d556b6b5da987ff921c4d8c971c916dbbf95c95bb7bc7571"
     },
     {
       "name": "mixed-lock-groups-input-output-type-primary",
-      "signature_policy": "compare",
       "tx_hash": "0x7a8cb9f7e530cc0d7222a36bace1fc54b2b25f882a7d2f39ea94d109de5c8100"
     },
     {
       "name": "mixed-lock-groups-input-output-type-secondary",
       "address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqffdkfhh9fv0kscyfnzr9y85ddyhgu53fcuhthwu",
       "path": "m/44'/309'/0'/0/1",
-      "signature_policy": "compare",
       "tx_hash": "0x7a8cb9f7e530cc0d7222a36bace1fc54b2b25f882a7d2f39ea94d109de5c8100"
     },
     {

@@ -91,7 +91,7 @@ test("loads recipes with defaults and keeps per-recipe overrides", () => {
         kind: "transfer",
         to_address: "ckt1to",
         amount_ckb: "100",
-        signature_policy: "compare",
+        signature_policy: "ignore",
       },
     ],
   };
@@ -102,7 +102,7 @@ test("loads recipes with defaults and keeps per-recipe overrides", () => {
   assert.equal(recipes[0]?.name, "self");
   assert.equal(recipes[0]?.fromAddress, "ckt1from");
   assert.equal(recipes[0]?.feeRate, 1000);
-  assert.equal(recipes[1]?.signaturePolicy, "compare");
+  assert.equal(recipes[1]?.signaturePolicy, "ignore");
   assert.equal(recipes[1]?.amountShannons, 10_000_000_000n);
 });
 
@@ -119,6 +119,20 @@ test("rejects duplicate recipe names", () => {
         ],
       }),
     /duplicate recipe name/,
+  );
+});
+
+test("rejects compare signature policy", () => {
+  assert.throws(
+    () =>
+      loadRecipesFromObject({
+        defaults: {
+          from_address: "ckt1from",
+          signature_policy: "compare",
+        },
+        recipes: [{ name: "self", kind: "self_transfer" }],
+      }),
+    /unsupported signature_policy/,
   );
 });
 
@@ -163,7 +177,7 @@ test("builds compare case json for both groups of a mixed lock transaction", () 
       from_address: "ckt1primary",
       path: "m/44'/309'/0'/0/0",
       transport: "webusb:000:1",
-      signature_policy: "compare",
+      signature_policy: "require",
     },
     recipes: [
       {
@@ -187,7 +201,7 @@ test("builds compare case json for both groups of a mixed lock transaction", () 
       address: "ckt1primary",
       path: "m/44'/309'/0'/0/0",
       transport: "webusb:000:1",
-      signature_policy: "compare",
+      signature_policy: "require",
     },
     cases: [
       {
@@ -333,7 +347,7 @@ test("builds witness payload fixtures as deterministic two-stage recipes", () =>
   assert.equal(recipes[5]?.trailingWitness, "0x0badc0ffee");
 });
 
-test("builds mixed lock group fixture with secondary path and compare policy", () => {
+test("builds mixed lock group fixture with secondary path and require policy", () => {
   const payload = buildOnchainFixtureRecipePayload({
     fromAddress: "ckt1from",
     externalAddress: "ckt1secondary",
@@ -351,7 +365,6 @@ test("builds mixed lock group fixture with secondary path and compare policy", (
       secondary_amount_ckb: "124",
       primary_input_count: 2,
       secondary_input_count: 2,
-      signature_policy: "compare",
     },
   ]);
 
@@ -361,7 +374,7 @@ test("builds mixed lock group fixture with secondary path and compare policy", (
   assert.equal(recipes[0]?.secondaryPath, "m/44'/309'/0'/0/1");
   assert.equal(recipes[0]?.primaryInputCount, 2);
   assert.equal(recipes[0]?.secondaryInputCount, 2);
-  assert.equal(recipes[0]?.signaturePolicy, "compare");
+  assert.equal(recipes[0]?.signaturePolicy, "require");
 });
 
 test("builds mixed lock group witness payload fixture for both account groups", () => {
@@ -386,7 +399,6 @@ test("builds mixed lock group witness payload fixture for both account groups", 
       primary_witness_output_type: "0x0304",
       secondary_witness_input_type: "0x0506",
       secondary_witness_output_type: "0x0708",
-      signature_policy: "compare",
     },
   ]);
 
@@ -396,7 +408,7 @@ test("builds mixed lock group witness payload fixture for both account groups", 
   assert.equal(recipes[0]?.primaryWitnessOutputType, "0x0304");
   assert.equal(recipes[0]?.secondaryWitnessInputType, "0x0506");
   assert.equal(recipes[0]?.secondaryWitnessOutputType, "0x0708");
-  assert.equal(recipes[0]?.signaturePolicy, "compare");
+  assert.equal(recipes[0]?.signaturePolicy, "require");
 });
 
 test("builds xUDT mint and transfer fixture recipes", () => {

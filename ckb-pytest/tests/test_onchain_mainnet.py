@@ -31,7 +31,7 @@ def test_ckb_tx_035_real_mainnet_transfer_5d357bc4(
         rpc_url=ckb_rpc_url,
         transport=trezor_transport,
         trezorctl=trezorctl_binary,
-        signature_policy="compare",
+        signature_policy="require",
         chunkify=False,
     )
 

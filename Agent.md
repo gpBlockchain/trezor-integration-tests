@@ -177,6 +177,7 @@ RPC 链上交易
 - 如果测试实现发现原文档预期错误，先修正文档并说明原因，再调整测试断言。
 - 新增 pytest 用例时，函数名必须包含用例 ID，例如 `test_ckb_tx_036_one_input_default_witness_placeholder`。
 - 新增链上 case 时，case JSON 的 `name` 必须等于 pytest 中传给 `fixture_name` 的值。
+- 新增链上正向 case 时，`signature_policy` 必须保持一致：默认使用 `require`，禁止使用 `compare` 半严格模式；只有明确没有链上 signature 可比较的手工/特殊场景才允许 `ignore`。
 - 如果 case 数据还没生成，测试可以 skip，但 skip 信息必须包含用例 ID 和 fixture name。
 - 对真实设备、链上 RPC、人工 UI、慢速压力测试继续使用显式 marker/参数保护。
 - 更新真实设备固件属于高风险操作，必须用户明确要求；脚本必须保留 `--dry-run`/`--yes` 保护。

@@ -209,7 +209,6 @@ export function buildOnchainFixtureRecipePayload(
       secondary_amount_ckb: "124",
       primary_input_count: 2,
       secondary_input_count: 2,
-      signature_policy: "compare",
     },
     {
       name: "mixed-lock-groups-input-output-type",
@@ -224,7 +223,6 @@ export function buildOnchainFixtureRecipePayload(
       primary_witness_output_type: "0x0304",
       secondary_witness_input_type: "0x0506",
       secondary_witness_output_type: "0x0708",
-      signature_policy: "compare",
     },
     {
       name: "output-with-type-script",

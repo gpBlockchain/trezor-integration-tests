@@ -33,8 +33,8 @@ def make_case(raw_case: dict[str, Any], defaults: dict[str, Any]) -> OnchainTest
     if network not in DEFAULT_RPC_URLS:
         raise ValueError(f"unsupported network for case {merged['name']}: {network}")
 
-    signature_policy = merged.get("signature_policy", "compare")
-    if signature_policy not in {"ignore", "compare", "require"}:
+    signature_policy = merged.get("signature_policy", "require")
+    if signature_policy not in {"ignore", "require"}:
         raise ValueError(
             f"unsupported signature_policy for case {merged['name']}: {signature_policy}"
         )

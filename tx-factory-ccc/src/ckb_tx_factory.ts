@@ -37,7 +37,7 @@ export type RecipeKind =
   | "two_stage_witness_payload"
   | "many_inputs_one_output"
   | "two_stage_many_inputs_one_output";
-export type SignaturePolicy = "ignore" | "compare" | "require";
+export type SignaturePolicy = "ignore" | "require";
 
 export type RawOutput = {
   to_address?: string;
@@ -352,7 +352,7 @@ function isNetwork(value: string): value is Network {
 }
 
 function isSignaturePolicy(value: string): value is SignaturePolicy {
-  return value === "ignore" || value === "compare" || value === "require";
+  return value === "ignore" || value === "require";
 }
 
 function isRecipeKind(value: string): value is RecipeKind {

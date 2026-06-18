@@ -4,7 +4,7 @@
     "address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqwlzl0nvrypnv8m34xd5n6ruvyakzw0v2s07n2ed",
     "path": "m/44'/309'/0'/0/0",
     "transport": "auto",
-    "signature_policy": "compare"
+    "signature_policy": "require"
   },
   "cases": [
     {

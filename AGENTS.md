@@ -37,6 +37,9 @@ For new or changed CKB behavior:
 - Firmware upload scripts must keep an explicit `--yes` or dry-run gate.
 - Keep generated artifacts in ignored paths such as `runs/` or `generated/`.
 - Keep case IDs stable. Function names should include the case ID when possible.
+- Keep on-chain positive cases on one strict signature policy: `require`. Do not
+  add `compare`; use `ignore` only for explicit manual/special cases where no
+  chain signature can be compared.
 
 ## Test Execution
 

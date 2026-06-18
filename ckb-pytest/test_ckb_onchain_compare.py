@@ -1043,6 +1043,30 @@ class OnchainCompareObjectPipelineTests(unittest.TestCase):
         self.assertEqual(cases[0].trezorctl, "auto")
         self.assertTrue(cases[0].chunkify)
 
+    def test_load_case_file_rejects_compare_signature_policy(self):
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            case_file = Path(tmp_dir) / "cases.json"
+            case_file.write_text(
+                json.dumps(
+                    {
+                        "defaults": {
+                            "network": "Testnet",
+                            "signature_policy": "compare",
+                        },
+                        "cases": [
+                            {
+                                "name": "bad-policy",
+                                "tx_hash": "0x" + "44" * 32,
+                            }
+                        ],
+                    }
+                )
+                + "\n"
+            )
+
+            with self.assertRaisesRegex(ValueError, "unsupported signature_policy"):
+                load_case_file(case_file)
+
     def test_mixed_lock_group_case_file_contains_both_signing_groups(self):
         cases = load_case_file(Path("cases.testnet.mnemonic.mixed-lock-groups-2x2.json"))
         by_name = {case.name: case for case in cases}
