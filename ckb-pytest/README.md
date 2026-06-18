@@ -26,7 +26,7 @@ Key helpers:
 ## Offline Checks
 
 ```bash
-cd /Users/guopenglin/gp-trezor/trezor-integration-tests/ckb-pytest
+cd ckb-pytest
 python3.9 -m pytest -q test_ckb_onchain_compare.py
 ```
 
@@ -34,7 +34,7 @@ python3.9 -m pytest -q test_ckb_onchain_compare.py
 
 Create `pytest.local.json` for personal defaults. This file is ignored.
 For an independent checkout, either install `trezorctl` on `PATH` or set the
-absolute binary path here. `auto` also accepts the `TREZORCTL` environment
+binary path through `TREZORCTL`. `auto` accepts the `TREZORCTL` environment
 variable.
 
 ```json
@@ -42,7 +42,7 @@ variable.
   "run_device": true,
   "run_onchain": true,
   "trezor_transport": "webusb:000:1",
-  "trezorctl": "/absolute/path/to/trezorctl",
+  "trezorctl": "auto",
   "onchain_case_file": "cases.testnet.hardware.json",
   "ckb_rpc_url": "http://testnet.ckb.dev",
   "artifact_dir": "runs/pytest-local",
@@ -122,7 +122,7 @@ command before execution:
 
 ```text
 [trezorctl] command
-/path/to/trezorctl -p webusb:000:1 ckb sign-tx --coin Testnet -n "m/44'/309'/0'/0/0" runs/.../trezor.sign_tx.json
+trezorctl -p webusb:000:1 ckb sign-tx --coin Testnet -n "m/44'/309'/0'/0/0" runs/.../trezor.sign_tx.json
 [trezorctl] command artifact: runs/.../trezorctl.command.json
 ```
 
@@ -137,15 +137,15 @@ cases.testnet.dao-withdraw1.json
 It is intentionally skipped in pytest because the current device flow signs the
 hash without top-level `header_deps`.
 
-Manual reproduction after generating `/private/tmp/dao-withdraw1.real-chain.trezor.sign_tx.with-header-deps.json`:
+Manual reproduction after generating `runs/manual/dao-withdraw1.real-chain.trezor.sign_tx.with-header-deps.json`:
 
 ```bash
-/Users/guopenglin/gp-trezor/trezor-firmware/.venv/bin/trezorctl \
+trezorctl \
   -p webusb:000:1 \
   ckb sign-tx \
   --coin Testnet \
   -n "m/44'/309'/0'/0/0" \
-  /private/tmp/dao-withdraw1.real-chain.trezor.sign_tx.with-header-deps.json
+  runs/manual/dao-withdraw1.real-chain.trezor.sign_tx.with-header-deps.json
 ```
 
 Observed result:

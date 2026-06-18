@@ -25,7 +25,7 @@ CKB 适配至少需要证明：
 推荐使用固定助记词启动，便于地址和签名结果复现：
 
 ```bash
-cd /Users/guopenglin/gp-trezor/trezor-firmware
+cd "$TREZOR_FIRMWARE_DIR"
 source .venv/bin/activate
 cd core
 ./emu.py --slip0014 --output /tmp/trezor-emulator.log

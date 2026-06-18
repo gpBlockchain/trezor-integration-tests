@@ -28,7 +28,7 @@ The CKB integration should prove the following:
 Recommended deterministic emulator startup:
 
 ```bash
-cd /Users/guopenglin/gp-trezor/trezor-firmware
+cd "$TREZOR_FIRMWARE_DIR"
 source .venv/bin/activate
 cd core
 ./emu.py --slip0014 --output /tmp/trezor-emulator.log

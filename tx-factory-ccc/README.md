@@ -10,7 +10,7 @@ for commit.
 ## Setup
 
 ```bash
-cd /Users/guopenglin/gp-trezor/trezor-integration-tests/tx-factory-ccc
+cd tx-factory-ccc
 npm install
 ```
 
@@ -155,7 +155,7 @@ real-device replay is blocked by missing top-level `header_deps` support.
 After writing a case file, replay it from `ckb-pytest`:
 
 ```bash
-cd /Users/guopenglin/gp-trezor/trezor-integration-tests/ckb-pytest
+cd ../ckb-pytest
 
 python3.9 -m pytest -s tests/test_transaction_semantics.py \
   --run-device \

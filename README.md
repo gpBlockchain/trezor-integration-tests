@@ -36,14 +36,14 @@ documents first, then tests and fixtures.
 Offline Python helper tests:
 
 ```bash
-cd /Users/guopenglin/gp-trezor/trezor-integration-tests/ckb-pytest
+cd ckb-pytest
 python3.9 -m pytest -q test_ckb_onchain_compare.py
 ```
 
 CCC fixture factory checks:
 
 ```bash
-cd /Users/guopenglin/gp-trezor/trezor-integration-tests/tx-factory-ccc
+cd tx-factory-ccc
 npm install
 npm test -- test/ckb_tx_factory.test.ts
 npm run build
@@ -59,10 +59,9 @@ it automatically.
 Prepare source-built `trezorctl`:
 
 ```bash
-cd /Users/guopenglin/gp-trezor/trezor-integration-tests
+export TREZOR_FIRMWARE_DIR=../trezor-firmware
 
 scripts/prepare_trezorctl.sh \
-  --firmware-dir /Users/guopenglin/gp-trezor/trezor-firmware \
   --write-pytest-local
 ```
 
@@ -70,7 +69,6 @@ Build firmware:
 
 ```bash
 scripts/build_firmware.sh \
-  --firmware-dir /Users/guopenglin/gp-trezor/trezor-firmware \
   --model T3W1 \
   --debug
 ```
@@ -79,7 +77,6 @@ Dry-run firmware upload before touching the device:
 
 ```bash
 scripts/update_device_firmware.sh \
-  --firmware-dir /Users/guopenglin/gp-trezor/trezor-firmware \
   --dry-run
 ```
 
@@ -88,7 +85,6 @@ bootloader/update mode first, then run:
 
 ```bash
 scripts/update_device_firmware.sh \
-  --firmware-dir /Users/guopenglin/gp-trezor/trezor-firmware \
   --yes
 ```
 
@@ -96,14 +92,12 @@ scripts/update_device_firmware.sh \
 
 Device and network tests are opt-in. They must be enabled explicitly.
 For an independent checkout, make `trezorctl` available on `PATH`, set
-`TREZORCTL`, pass `--trezorctl /absolute/path/to/trezorctl`, or put the path in
+`TREZORCTL`, pass `--trezorctl`, or put the path in
 ignored `ckb-pytest/pytest.local.json`.
 
 Recommended one-command daily regression:
 
 ```bash
-cd /Users/guopenglin/gp-trezor/trezor-integration-tests
-
 scripts/run_regression.sh
 ```
 
@@ -125,7 +119,7 @@ scripts/run_regression.sh --include-slow --target tests/test_boundary.py
 Manual pytest equivalent:
 
 ```bash
-cd /Users/guopenglin/gp-trezor/trezor-integration-tests/ckb-pytest
+cd ckb-pytest
 
 python3.9 -m pytest -s tests/test_transaction_semantics.py::test_ckb_tx_012_output_with_type_script \
   --run-device \
@@ -153,7 +147,7 @@ Use `tx-factory-ccc` to generate Testnet transactions and case JSON. Keep
 mnemonics in `.env.local` or a local mnemonic file only.
 
 ```bash
-cd /Users/guopenglin/gp-trezor/trezor-integration-tests/tx-factory-ccc
+cd tx-factory-ccc
 
 npm exec -- tsx src/ckb_tx_factory.ts \
   --generate-fixture-recipes \

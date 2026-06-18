@@ -169,7 +169,7 @@ class OnchainCompareObjectPipelineTests(unittest.TestCase):
     def test_pycharm_path_selection_auto_runs_device_and_debug(self):
         args = (
             "--path",
-            "/Users/guopenglin/gp-trezor/trezor-integration-tests/ckb-pytest/tests/test_negative.py",
+            "/workspace/trezor-integration-tests/ckb-pytest/tests/test_negative.py",
             "--no-header",
             "--no-summary",
             "-q",
@@ -184,7 +184,7 @@ class OnchainCompareObjectPipelineTests(unittest.TestCase):
     def test_pycharm_tests_directory_selection_auto_runs_device_but_not_slow(self):
         args = (
             "--path",
-            "/Users/guopenglin/gp-trezor/trezor-integration-tests/ckb-pytest/tests",
+            "/workspace/trezor-integration-tests/ckb-pytest/tests",
             "--no-header",
             "--no-summary",
             "-q",

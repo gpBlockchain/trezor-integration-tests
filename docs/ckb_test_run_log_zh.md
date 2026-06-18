@@ -35,7 +35,7 @@
 启动 emulator：
 
 ```bash
-cd /Users/guopenglin/gp-trezor/trezor-firmware
+cd "$TREZOR_FIRMWARE_DIR"
 source .venv/bin/activate
 cd core
 ./emu.py --slip0014 --output /tmp/trezor-emulator.log
@@ -56,7 +56,7 @@ trezorctl -p udp:127.0.0.1:21324 get-features
 pytest 集成测试：
 
 ```bash
-cd /Users/guopenglin/gp-trezor/trezor-integration-tests/ckb-pytest
+cd ckb-pytest
 
 # 默认只跑离线工具层测试，不触发设备
 pytest -q
@@ -105,7 +105,7 @@ tests/ckb-pytest/runs/pytest/<test_nodeid_sanitized>/
 建议执行命令：
 
 ```bash
-cd /Users/guopenglin/gp-trezor/trezor-firmware
+cd "$TREZOR_FIRMWARE_DIR"
 source .venv/bin/activate
 python -m pytest tests/device_tests/ckb/test_sign_tx.py -k sign_real_mainnet_transfer_5d357bc4
 ```

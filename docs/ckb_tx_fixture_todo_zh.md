@@ -112,7 +112,7 @@
 先生成和 pytest `fixture_name` 对齐的 recipe：
 
 ```bash
-cd /Users/guopenglin/gp-trezor/trezor-integration-tests/tx-factory-ccc
+cd tx-factory-ccc
 
 npm exec -- tsx src/ckb_tx_factory.ts \
   --generate-fixture-recipes \
@@ -139,7 +139,7 @@ npm exec -- tsx src/ckb_tx_factory.ts \
 pytest 回放：
 
 ```bash
-cd /Users/guopenglin/gp-trezor/trezor-integration-tests/ckb-pytest
+cd ckb-pytest
 
 pytest -s tests/test_transaction_semantics.py \
   --run-device \
