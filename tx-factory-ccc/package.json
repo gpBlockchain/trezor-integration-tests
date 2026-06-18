@@ -1,0 +1,25 @@
+{
+  "name": "trezor-ckb-tx-factory-ccc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --import tsx --test 'test/**/*.test.ts'",
+    "build": "tsc --noEmit",
+    "start": "tsx src/ckb_tx_factory.ts",
+    "fixtures:generate": "sh -c 'set -a; . ./.env.local; set +a; tsx src/ckb_tx_factory.ts --generate-fixture-recipes --path \"$CKB_TEST_PATH\" --external-path \"$CKB_TEST_EXTERNAL_PATH\" --out-recipe-file generated/mnemonic/all.recipes.json'",
+    "fixtures:send": "sh -c 'set -a; . ./.env.local; set +a; tsx src/ckb_tx_factory.ts --generate-fixture-recipes --path \"$CKB_TEST_PATH\" --external-path \"$CKB_TEST_EXTERNAL_PATH\" --out-recipe-file generated/mnemonic/all.recipes.json --out-dir generated/mnemonic/all --out-case-file ../ckb-pytest/cases.testnet.mnemonic.all.json --send'",
+    "fixtures:generate:all:mnemonic": "npm run fixtures:generate",
+    "fixtures:send:all:mnemonic": "npm run fixtures:send"
+  },
+  "dependencies": {
+    "@ckb-ccc/core": "^1.8.0",
+    "@scure/bip32": "^1.7.0",
+    "@scure/bip39": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

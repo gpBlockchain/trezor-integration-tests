@@ -1,0 +1,15 @@
+{
+  "defaults": {
+    "network": "Testnet",
+    "address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqwlzl0nvrypnv8m34xd5n6ruvyakzw0v2s07n2ed",
+    "path": "m/44'/309'/0'/0/0",
+    "transport": "auto",
+    "signature_policy": "compare"
+  },
+  "cases": [
+    {
+      "name": "witness-args-and-random-raw",
+      "tx_hash": "0x742fbdb8a4f42558c7ffbbfa0c5f902332f3bb4c7ea7614ba3fded9cc2919c98"
+    }
+  ]
+}

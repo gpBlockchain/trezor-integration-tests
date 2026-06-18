@@ -1,0 +1,21 @@
+{
+  "defaults": {
+    "network": "Testnet",
+    "address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqwlzl0nvrypnv8m34xd5n6ruvyakzw0v2s07n2ed",
+    "path": "m/44'/309'/0'/0/0",
+    "transport": "auto",
+    "signature_policy": "compare"
+  },
+  "cases": [
+    {
+      "name": "mixed-lock-groups-primary",
+      "tx_hash": "0xfdf3ae2403e05306d556b6b5da987ff921c4d8c971c916dbbf95c95bb7bc7571"
+    },
+    {
+      "name": "mixed-lock-groups-secondary",
+      "address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqffdkfhh9fv0kscyfnzr9y85ddyhgu53fcuhthwu",
+      "path": "m/44'/309'/0'/0/1",
+      "tx_hash": "0xfdf3ae2403e05306d556b6b5da987ff921c4d8c971c916dbbf95c95bb7bc7571"
+    }
+  ]
+}

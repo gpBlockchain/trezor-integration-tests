@@ -1,0 +1,53 @@
+{
+  "defaults": {
+    "network": "Testnet",
+    "address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqwlzl0nvrypnv8m34xd5n6ruvyakzw0v2s07n2ed",
+    "path": "m/44'/309'/0'/0/0",
+    "transport": "auto",
+    "signature_policy": "require"
+  },
+  "cases": [
+    {
+      "name": "self-send-change-only",
+      "tx_hash": "0xd60446c0b6ae0a83df8df639a8f754018baf2cd43a9674824cd4db0909cb454b"
+    },
+    {
+      "name": "external-output-plus-change",
+      "tx_hash": "0xeb005d0c1aad2fd8248e34a319a79d75f51562abf7271b98c886e654d21ffb87"
+    },
+    {
+      "name": "multiple-inputs-same-account",
+      "tx_hash": "0x355602c9c99b12f03fcb35e891d60c9601c04c314b26a93880a0debd098aa429"
+    },
+    {
+      "name": "output-data-present",
+      "tx_hash": "0xd13f341e6cda6b55962aeefb51c27b91cf478942c2f36de6119f2a39b3d4aa16"
+    },
+    {
+      "name": "one-input-default-witness",
+      "tx_hash": "0x0ffde98e846b773d7397ca2cad2a0eb0138b5f3a1a452bdcbd20a1d132013a1a"
+    },
+    {
+      "name": "two-inputs-same-lock-group",
+      "tx_hash": "0xd970703b7399161a039c9ba0ba76aa2b31384383c9f16513f7b5d17fc773db94"
+    },
+    {
+      "name": "1-input-50-outputs",
+      "tx_hash": "0x0ff55ffc2db4b2a72cc9e82b2d482e90ed1dcf4276b2b12d739534980eab2ca1"
+    },
+    {
+      "name": "50-inputs-50-outputs",
+      "tx_hash": "0x3a8ede103eb6d6b55d6753a01f2a92b39c166e1433487c2dc5220ec1ce1c35a5"
+    },
+    {
+      "name": "100kb-output-data",
+      "tx_hash": "0xc85fb31df26b40eeb4fa26bb80cd780d1896d594b171eec455c3795c360b1693",
+      "chunkify": true
+    },
+    {
+      "name": "100-inputs-100-outputs",
+      "tx_hash": "0x0eb6545f13e2cded6c3b414390f08782391cae84841a7cd3e31938d5240cc951",
+      "chunkify": true
+    }
+  ]
+}

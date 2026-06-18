@@ -1,0 +1,35 @@
+{
+  "defaults": {
+    "network": "Testnet",
+    "address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqwlzl0nvrypnv8m34xd5n6ruvyakzw0v2s07n2ed",
+    "path": "m/44'/309'/0'/0/0",
+    "transport": "webusb:000:1",
+    "signature_policy": "require"
+  },
+  "cases": [
+    {
+      "name": "one-input-default-witness",
+      "tx_hash": "0xf9d787fe6378586855b263bf0d9cd7407c554a485b1c70ba335589522c25958a"
+    },
+    {
+      "name": "two-inputs-same-lock-group",
+      "tx_hash": "0xd970703b7399161a039c9ba0ba76aa2b31384383c9f16513f7b5d17fc773db94"
+    },
+    {
+      "name": "dao-deposit",
+      "tx_hash": "0xb559be5a0624a7d64d84f90839ee8e10e11d9af3da712c6c53d39733c0ffe869"
+    },
+    {
+      "name": "dao-withdraw1",
+      "tx_hash": "0x7bfc26ccb73c60df6459f4c1f9ffbbccb43f43d8fe71f52d8c6fd3d2ee0dc0db"
+    },
+    {
+      "name": "top-level-header-dep",
+      "tx_hash": "0x7bfc26ccb73c60df6459f4c1f9ffbbccb43f43d8fe71f52d8c6fd3d2ee0dc0db"
+    },
+    {
+      "name": "testnet-self-transfer-2026-06-02",
+      "tx_hash": "0xf9d787fe6378586855b263bf0d9cd7407c554a485b1c70ba335589522c25958a"
+    }
+  ]
+}

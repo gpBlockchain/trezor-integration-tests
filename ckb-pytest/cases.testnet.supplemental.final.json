@@ -1,0 +1,27 @@
+{
+  "defaults": {
+    "network": "Testnet",
+    "address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqwlzl0nvrypnv8m34xd5n6ruvyakzw0v2s07n2ed",
+    "path": "m/44'/309'/0'/0/0",
+    "transport": "auto",
+    "signature_policy": "require"
+  },
+  "cases": [
+    {
+      "name": "long-type-args",
+      "tx_hash": "0x761985cfb35ec97f9bcb3a589220d313de4f3581d0f4877d0c19b371029d7d13"
+    },
+    {
+      "name": "lock-hash-type-data1",
+      "tx_hash": "0x7dc21cdb93ae43c643a7e1f77a413bab6028d426c82a4d7d19818679c2d47b43"
+    },
+    {
+      "name": "lock-hash-type-data2",
+      "tx_hash": "0x8fb11d52522bd2cc343f202420ae7372c2455b77e62a1bc9d3853af7da8a24bd"
+    },
+    {
+      "name": "type-hash-type-data1-data2",
+      "tx_hash": "0x321c5409f285c20f6c988e4b36b703b43c221fbb3d8f968009abf2f73d0bf98d"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "defaults": {
+    "network": "Testnet",
+    "from_address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqwlzl0nvrypnv8m34xd5n6ruvyakzw0v2s07n2ed",
+    "path": "m/44'/309'/0'/0/0",
+    "transport": "webusb:000:1",
+    "signature_policy": "require",
+    "fee_rate": 1000,
+    "wait_committed": true
+  },
+  "recipes": [
+    {
+      "name": "self-transfer-62-ckb",
+      "kind": "self_transfer",
+      "amount_ckb": "62"
+    },
+    {
+      "name": "transfer-self-100-ckb",
+      "kind": "transfer",
+      "to_address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqwlzl0nvrypnv8m34xd5n6ruvyakzw0v2s07n2ed",
+      "amount_ckb": "100"
+    },
+    {
+      "name": "multi-output-self-62-63-ckb",
+      "kind": "multi_output",
+      "outputs": [
+        {
+          "to_address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqwlzl0nvrypnv8m34xd5n6ruvyakzw0v2s07n2ed",
+          "amount_ckb": "62"
+        },
+        {
+          "to_address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqwlzl0nvrypnv8m34xd5n6ruvyakzw0v2s07n2ed",
+          "amount_ckb": "63"
+        }
+      ]
+    }
+  ]
+}

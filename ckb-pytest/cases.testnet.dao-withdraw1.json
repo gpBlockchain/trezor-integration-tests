@@ -1,0 +1,23 @@
+{
+  "defaults": {
+    "network": "Testnet",
+    "address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqwlzl0nvrypnv8m34xd5n6ruvyakzw0v2s07n2ed",
+    "path": "m/44'/309'/0'/0/0",
+    "transport": "auto",
+    "signature_policy": "require"
+  },
+  "cases": [
+    {
+      "name": "dao-deposit",
+      "tx_hash": "0xb559be5a0624a7d64d84f90839ee8e10e11d9af3da712c6c53d39733c0ffe869"
+    },
+    {
+      "name": "dao-withdraw1",
+      "tx_hash": "0x7bfc26ccb73c60df6459f4c1f9ffbbccb43f43d8fe71f52d8c6fd3d2ee0dc0db"
+    },
+    {
+      "name": "top-level-header-dep",
+      "tx_hash": "0x7bfc26ccb73c60df6459f4c1f9ffbbccb43f43d8fe71f52d8c6fd3d2ee0dc0db"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "network": "Testnet",
+    "from_address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqwlzl0nvrypnv8m34xd5n6ruvyakzw0v2s07n2ed",
+    "to_address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqwlzl0nvrypnv8m34xd5n6ruvyakzw0v2s07n2ed",
+    "path": "m/44'/309'/0'/0/0",
+    "transport": "webusb:000:1",
+    "signature_policy": "require",
+    "fee_rate": 1000,
+    "wait_committed": true
+  },
+  "recipes": [
+    {
+      "name": "same-lock-group-non-empty-witness",
+      "kind": "two_stage_witness_payload",
+      "funding_amount_ckb": "62",
+      "amount_ckb": "123",
+      "target_input_count": 2,
+      "same_group_second_witness": "0x050607"
+    },
+    {
+      "name": "first-group-input-output-type",
+      "kind": "two_stage_witness_payload",
+      "funding_amount_ckb": "62",
+      "amount_ckb": "62",
+      "witness_input_type": "0x0102",
+      "witness_output_type": "0x0304"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "defaults": {
+    "network": "Testnet",
+    "address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqwlzl0nvrypnv8m34xd5n6ruvyakzw0v2s07n2ed",
+    "path": "m/44'/309'/0'/0/0",
+    "transport": "webusb:000:1",
+    "signature_policy": "require"
+  },
+  "cases": [
+    {
+      "name": "same-lock-group-non-empty-witness",
+      "tx_hash": "0xf05fbfa72a7cc178a4cb3ad43d5268d8bfafbf884290c96b4b586e8366a136d3"
+    },
+    {
+      "name": "first-group-input-output-type",
+      "tx_hash": "0x1de44d9c134dd2829acf18573ffc297b770cdb5f161bd26f0e22861d2b8bb63e"
+    }
+  ]
+}

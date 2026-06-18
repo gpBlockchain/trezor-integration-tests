@@ -1,0 +1,18 @@
+.DS_Store
+.idea/
+__pycache__/
+.pytest_cache/
+.venv/
+node_modules/
+dist/
+
+# Local device, RPC, mnemonic, private-key, and path settings.
+.env
+.env.*
+*.local.json
+pytest.local.json
+
+# Generated artifacts and submitted fixture outputs.
+runs/
+artifacts/
+generated/

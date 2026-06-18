@@ -1,0 +1,15 @@
+{
+  "defaults": {
+    "network": "Testnet",
+    "address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqwlzl0nvrypnv8m34xd5n6ruvyakzw0v2s07n2ed",
+    "path": "m/44'/309'/0'/0/0",
+    "transport": "webusb:000:1",
+    "signature_policy": "require"
+  },
+  "cases": [
+    {
+      "name": "two-inputs-same-lock-group",
+      "tx_hash": "0xd970703b7399161a039c9ba0ba76aa2b31384383c9f16513f7b5d17fc773db94"
+    }
+  ]
+}

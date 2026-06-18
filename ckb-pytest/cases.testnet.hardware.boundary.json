@@ -1,0 +1,15 @@
+{
+  "defaults": {
+    "network": "Testnet",
+    "address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqwlzl0nvrypnv8m34xd5n6ruvyakzw0v2s07n2ed",
+    "path": "m/44'/309'/0'/0/0",
+    "transport": "webusb:000:1",
+    "signature_policy": "require"
+  },
+  "cases": [
+    {
+      "name": "50-inputs-1-output",
+      "tx_hash": "0xa07504119846008754572626448b842a8c7c53af8c44b880348c087a6d79ba69"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "defaults": {
+    "network": "Testnet",
+    "address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqwlzl0nvrypnv8m34xd5n6ruvyakzw0v2s07n2ed",
+    "path": "m/44'/309'/0'/0/0",
+    "transport": "webusb:000:1",
+    "signature_policy": "require"
+  },
+  "cases": [
+    {
+      "name": "self-send-change-only",
+      "tx_hash": "0xd60446c0b6ae0a83df8df639a8f754018baf2cd43a9674824cd4db0909cb454b"
+    },
+    {
+      "name": "external-output-plus-change",
+      "tx_hash": "0xeb005d0c1aad2fd8248e34a319a79d75f51562abf7271b98c886e654d21ffb87"
+    },
+    {
+      "name": "multiple-inputs-same-account",
+      "tx_hash": "0x355602c9c99b12f03fcb35e891d60c9601c04c314b26a93880a0debd098aa429"
+    },
+    {
+      "name": "output-data-present",
+      "tx_hash": "0xd13f341e6cda6b55962aeefb51c27b91cf478942c2f36de6119f2a39b3d4aa16"
+    },
+    {
+      "name": "50-inputs-1-output",
+      "tx_hash": "0xa07504119846008754572626448b842a8c7c53af8c44b880348c087a6d79ba69"
+    },
+    {
+      "name": "1-input-50-outputs",
+      "tx_hash": "0xe043083a899a904cff1783b56b41c9ca6ee2de4d34c0df00b6ad4c6327d59a6a"
+    },
+    {
+      "name": "50-inputs-50-outputs",
+      "tx_hash": "0x8dcf6fb4915c5e62638f6ee5fb83f652c528de82c309768e3abf2a021eb4fc7e"
+    },
+    {
+      "name": "100kb-output-data",
+      "tx_hash": "0xd3503cf5cd8a1bd60f621bcb21d82a5bb288da224732cb3287bcda05c47de144"
+    },
+    {
+      "name": "100-inputs-100-outputs",
+      "tx_hash": "0x0fda0ed2438f55f56624f885b1b58077a457cae9654a16a8f41f35f380de6796"
+    },
+    {
+      "name": "one-input-default-witness",
+      "tx_hash": "0x69fa70fc5a5b544e48ffeb9be801fd27aaa27f9273f9b555ef2460faa3ab3999"
+    },
+    {
+      "name": "two-inputs-same-lock-group",
+      "tx_hash": "0xd970703b7399161a039c9ba0ba76aa2b31384383c9f16513f7b5d17fc773db94"
+    },
+    {
+      "name": "trailing-witness",
+      "tx_hash": "0x4541fb35f0a845881593b35782ffb65ce49bf26f4dd18120873e194ea93e2df2"
+    },
+    {
+      "name": "first-group-input-type",
+      "tx_hash": "0x0c640707ef5fd1df5d045c982e88b359875928d4f0cdcdf281028347b729e535"
+    },
+    {
+      "name": "first-group-output-type",
+      "tx_hash": "0xdb4d8531dbb0cb12ee2ef7a3b817690e0aabcba529d63955683fe25e2a1814b8"
+    },
+    {
+      "name": "same-lock-group-non-empty-witness",
+      "tx_hash": "0xf05fbfa72a7cc178a4cb3ad43d5268d8bfafbf884290c96b4b586e8366a136d3"
+    },
+    {
+      "name": "first-group-input-output-type",
+      "tx_hash": "0x1de44d9c134dd2829acf18573ffc297b770cdb5f161bd26f0e22861d2b8bb63e"
+    },
+    {
+      "name": "witness-args-and-random-raw",
+      "signature_policy": "compare",
+      "tx_hash": "0x742fbdb8a4f42558c7ffbbfa0c5f902332f3bb4c7ea7614ba3fded9cc2919c98"
+    },
+    {
+      "name": "mixed-lock-groups-primary",
+      "signature_policy": "compare",
+      "tx_hash": "0xfdf3ae2403e05306d556b6b5da987ff921c4d8c971c916dbbf95c95bb7bc7571"
+    },
+    {
+      "name": "mixed-lock-groups-secondary",
+      "address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqffdkfhh9fv0kscyfnzr9y85ddyhgu53fcuhthwu",
+      "path": "m/44'/309'/0'/0/1",
+      "signature_policy": "compare",
+      "tx_hash": "0xfdf3ae2403e05306d556b6b5da987ff921c4d8c971c916dbbf95c95bb7bc7571"
+    },
+    {
+      "name": "mixed-lock-groups-input-output-type-primary",
+      "signature_policy": "compare",
+      "tx_hash": "0x7a8cb9f7e530cc0d7222a36bace1fc54b2b25f882a7d2f39ea94d109de5c8100"
+    },
+    {
+      "name": "mixed-lock-groups-input-output-type-secondary",
+      "address": "ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqffdkfhh9fv0kscyfnzr9y85ddyhgu53fcuhthwu",
+      "path": "m/44'/309'/0'/0/1",
+      "signature_policy": "compare",
+      "tx_hash": "0x7a8cb9f7e530cc0d7222a36bace1fc54b2b25f882a7d2f39ea94d109de5c8100"
+    },
+    {
+      "name": "xudt-mint",
+      "tx_hash": "0x54591aefa39687a05ea4e29df386024dca16f07dc3e6335e0fc9db9d1e348770"
+    },
+    {
+      "name": "xudt-transfer",
+      "tx_hash": "0xa55f405f2e18db19f7e8b7b76aeac5a40c98d132c025e5bf5a5b09abbdf4b1eb"
+    },
+    {
+      "name": "dao-deposit",
+      "tx_hash": "0xb559be5a0624a7d64d84f90839ee8e10e11d9af3da712c6c53d39733c0ffe869"
+    },
+    {
+      "name": "dao-withdraw1",
+      "tx_hash": "0x7bfc26ccb73c60df6459f4c1f9ffbbccb43f43d8fe71f52d8c6fd3d2ee0dc0db"
+    },
+    {
+      "name": "top-level-header-dep",
+      "tx_hash": "0x7bfc26ccb73c60df6459f4c1f9ffbbccb43f43d8fe71f52d8c6fd3d2ee0dc0db"
+    },
+    {
+      "name": "output-with-type-script",
+      "tx_hash": "0x10f960aaa3aafb68647e6ebba9071be5e30e29b5648357690cf9ad3805f06ab3"
+    },
+    {
+      "name": "multiple-cell-deps-ordered",
+      "tx_hash": "0x6db8120010310ae1991a5e1b51040c352ab29147b67a0e00dc9d08ece4110bf0"
+    },
+    {
+      "name": "long-lock-args-chunkify",
+      "tx_hash": "0x0fe2485ae3c89f6a92895415a5396a45d9471b9a20b9e722d0a60b4b5e3aa873"
+    },
+    {
+      "name": "long-type-args",
+      "tx_hash": "0x761985cfb35ec97f9bcb3a589220d313de4f3581d0f4877d0c19b371029d7d13"
+    },
+    {
+      "name": "lock-hash-type-data1",
+      "tx_hash": "0x7dc21cdb93ae43c643a7e1f77a413bab6028d426c82a4d7d19818679c2d47b43"
+    },
+    {
+      "name": "lock-hash-type-data2",
+      "tx_hash": "0x8fb11d52522bd2cc343f202420ae7372c2455b77e62a1bc9d3853af7da8a24bd"
+    },
+    {
+      "name": "type-hash-type-data1-data2",
+      "tx_hash": "0x321c5409f285c20f6c988e4b36b703b43c221fbb3d8f968009abf2f73d0bf98d"
+    }
+  ]
+}
